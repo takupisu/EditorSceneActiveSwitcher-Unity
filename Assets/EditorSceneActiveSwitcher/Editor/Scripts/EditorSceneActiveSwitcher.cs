@@ -17,6 +17,7 @@ public class EditorSceneSwitcher : Editor {
 		};
 	}
 
+    const float Width = 40f;
 	static void DrawComponentIcons (int instanceID, Rect rect)
 	{
 		if(Application.isPlaying) {
@@ -24,8 +25,8 @@ public class EditorSceneSwitcher : Editor {
 		}
 
 		// チェックボックス表示位置
-		rect.x += rect.width - 40;
-		rect.width = 40;
+		rect.x += rect.width - Width;
+		rect.width = Width;
 
 		if(EditorUtility.InstanceIDToObject(instanceID)) {
 			return;
