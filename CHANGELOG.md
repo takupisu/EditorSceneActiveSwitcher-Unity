@@ -7,6 +7,11 @@
 
 - v1.0.0　Release [\#2](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/issues/2)
 
+**Merged pull requests:**
+
+- Merge pull request \#3 from takupisu/develop [\#4](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/pull/4) ([takupisu](https://github.com/takupisu))
+- Merge [\#3](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/pull/3) ([takupisu](https://github.com/takupisu))
+
 ## [v0.1.0](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/tree/v0.1.0) (2018-09-14)
 **Implemented enhancements:**
 
