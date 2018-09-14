@@ -1,6 +1,13 @@
 # Change Log
 
-## [v0.1.0](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/tree/v0.1.0) (2018-09-15)
+## [v1.0.0](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/tree/v1.0.0) (2018-09-15)
+[Full Changelog](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/compare/v0.1.0...v1.0.0)
+
+**Implemented enhancements:**
+
+- v1.0.0　Release [\#2](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/issues/2)
+
+## [v0.1.0](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/tree/v0.1.0) (2018-09-14)
 **Implemented enhancements:**
 
 - Release v0.1.0 [\#1](https://github.com/takupisu/EditorSceneActiveSwitcher-Unity/issues/1)

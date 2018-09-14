@@ -10,15 +10,14 @@ using System.Reflection;
 /// </summary>
 [InitializeOnLoad]
 public class EditorSceneSwitcher : Editor {
-
-	static EditorSceneSwitcher () {
-		EditorApplication.hierarchyWindowItemOnGUI += (instanceID, rect) => {
-			DrawComponentIcons (instanceID, rect);
-		};
-	}
-
+    // チェックボックス表示位置
     const float Width = 40f;
-	static void DrawComponentIcons (int instanceID, Rect rect)
+
+    static EditorSceneSwitcher () {
+        EditorApplication.hierarchyWindowItemOnGUI += DrawComponentToggle;
+    }
+
+	static void DrawComponentToggle (int instanceID, Rect rect)
 	{
 		if(Application.isPlaying) {
 			return;
