@@ -23,34 +23,26 @@ public class EditorSceneSwitcher : Editor {
 			return;
 		}
 
-		// チェックボックス表示位置
-		rect.x += rect.width - Width;
-		rect.width = Width;
-
-		if(EditorUtility.InstanceIDToObject(instanceID)) {
+        if (EditorUtility.InstanceIDToObject(instanceID)) {
 			return;
 		}
 
-		var setups = EditorSceneManager.GetSceneManagerSetup();
-		if(null == setups || setups.Length <= 0) {
-			return;
-		}
-
+        // シーンオブジェクト取得
 		var miGetSceneByHandle = typeof(EditorSceneManager).GetMethod("GetSceneByHandle",BindingFlags.NonPublic | BindingFlags.Static);
 		Scene s = (Scene)miGetSceneByHandle.Invoke(null, new object[]{instanceID});
 
-		if (s.isLoaded != GUI.Toggle(rect,s.isLoaded,"")){
-			for (int i = 0; i < setups.Length; i++){
-				if (setups[i].path == s.path){
-					setups[i].isLoaded = !s.isLoaded;
-					if(s.isLoaded) {
-						EditorSceneManager.SaveScene(s);
-						EditorSceneManager.CloseScene(s, false);
-					} else {
-						EditorSceneManager.OpenScene(s.path, OpenSceneMode.Additive);
-					}
-					break;
-				}
+        // チェックボックス表示位置
+        rect.x += rect.width - Width;
+        rect.width = Width;
+
+        // チェックボックス表示
+        if (s.isLoaded != GUI.Toggle(rect, s.isLoaded, ""))
+        {
+			if(s.isLoaded) {
+				EditorSceneManager.SaveScene(s);
+				EditorSceneManager.CloseScene(s, false);
+			} else {
+				EditorSceneManager.OpenScene(s.path, OpenSceneMode.Additive);
 			}
 		}
 	}
